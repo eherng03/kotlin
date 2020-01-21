@@ -96,7 +96,10 @@ internal class InterfaceLowering(val context: JvmBackendContext) : IrElementTran
                  *    ```
                  */
                 function.origin == IrDeclarationOrigin.FAKE_OVERRIDE -> {
-                    val implementation = function.resolveFakeOverride()!!
+                    // We use `resolveFakeOverrideWithBugCompatibility` due to a front-end bug (KT-36188) where there could be multiple
+                    // fake-overridden implementations of a default stub function.
+                    val implementation =
+                        function.resolveFakeOverrideWithBugCompatibility() ?: error("No implementation found for: ${function.render()}")
 
                     when {
                         Visibilities.isPrivate(implementation.visibility) ||

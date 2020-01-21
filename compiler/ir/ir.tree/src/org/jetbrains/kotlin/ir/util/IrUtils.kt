@@ -304,6 +304,17 @@ fun IrSimpleFunction.resolveFakeOverride(toSkip: (IrSimpleFunction) -> Boolean =
         }
 }
 
+fun IrSimpleFunction.resolveFakeOverrideWithBugCompatibility(): IrSimpleFunction? {
+    return if (name.asString().endsWith("\$default")) {
+        // Normally there should only be one fake-overridden implementation, but currently this is not the case for default stub functions
+        // due to a front-end bug (KT-36188). To maintain compatibility with the non-IR backend, we pick the first implementation.
+        // (`resolveFakeOverride` uses `singleOrNull`.)
+        collectRealOverrides().firstOrNull { it.modality != Modality.ABSTRACT }
+    } else {
+        resolveFakeOverride()
+    }
+}
+
 fun IrSimpleFunction.isOrOverridesSynthesized(): Boolean {
     if (isSynthesized) return true
 

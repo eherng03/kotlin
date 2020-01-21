@@ -174,7 +174,10 @@ private class BridgeLowering(val context: JvmBackendContext) : FileLoweringPass,
             // (MutableMap.remove and getOrDefault). Trying to produce (special) bridges for these methods could
             // result in incorrect bytecode on older JVM versions. However, all such methods are declared
             // in interfaces and thus we don't need a separate check for them.
-            return !irFunction.isFakeOverride || !irFunction.resolveFakeOverride()!!.parentAsClass.isJvmInterface
+            //
+            // We use `resolveFakeOverrideWithBugCompatibility` due to a front-end bug (KT-36188) where there could be multiple
+            // fake-overridden implementations of a default stub function.
+            return !irFunction.isFakeOverride || !irFunction.resolveFakeOverrideWithBugCompatibility()!!.parentAsClass.isJvmInterface
         })
 
         for (member in potentialBridgeTargets) {
