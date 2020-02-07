@@ -89,7 +89,7 @@ final class CrossinlineKt$consumeEach$2$send$1 {
 
 @kotlin.Metadata
 public final class CrossinlineKt$consumeEach$2 {
-    private synthetic final field $action: kotlin.jvm.functions.Function2
+    synthetic final @org.jetbrains.annotations.NotNull field $action: kotlin.jvm.functions.Function2
     inner class CrossinlineKt$consumeEach$2
     public method <init>(p0: kotlin.jvm.functions.Function2): void
     public method close(@org.jetbrains.annotations.Nullable p0: java.lang.Throwable): void
@@ -327,7 +327,7 @@ final class CrossinlineKt$source$1$consume$1 {
 
 @kotlin.Metadata
 public final class CrossinlineKt$source$1 {
-    private synthetic final field $action: kotlin.jvm.functions.Function2
+    synthetic final @org.jetbrains.annotations.NotNull field $action: kotlin.jvm.functions.Function2
     inner class CrossinlineKt$source$1
     public method <init>(p0: kotlin.jvm.functions.Function2): void
     public @org.jetbrains.annotations.Nullable method consume$$forInline(@org.jetbrains.annotations.NotNull p0: Sink, @org.jetbrains.annotations.NotNull p1: kotlin.coroutines.Continuation): java.lang.Object

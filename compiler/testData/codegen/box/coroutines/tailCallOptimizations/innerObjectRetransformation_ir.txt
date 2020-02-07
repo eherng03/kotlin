@@ -70,7 +70,7 @@ final class flow/InnerObjectRetransformationKt$collect$2$emit$1 {
 
 @kotlin.Metadata
 public final class flow/InnerObjectRetransformationKt$collect$2 {
-    private synthetic final field $action: kotlin.jvm.functions.Function2
+    synthetic final @org.jetbrains.annotations.NotNull field $action: kotlin.jvm.functions.Function2
     inner class flow/InnerObjectRetransformationKt$collect$2
     public method <init>(p0: kotlin.jvm.functions.Function2): void
     public @org.jetbrains.annotations.Nullable method emit$$forInline(@org.jetbrains.annotations.NotNull p0: java.lang.Object, @org.jetbrains.annotations.NotNull p1: kotlin.coroutines.Continuation): java.lang.Object
@@ -88,7 +88,7 @@ final class flow/InnerObjectRetransformationKt$flow$1$collect$1 {
 
 @kotlin.Metadata
 public final class flow/InnerObjectRetransformationKt$flow$1 {
-    private synthetic final field $block: kotlin.jvm.functions.Function2
+    synthetic final @org.jetbrains.annotations.NotNull field $block: kotlin.jvm.functions.Function2
     inner class flow/InnerObjectRetransformationKt$flow$1
     public method <init>(p0: kotlin.jvm.functions.Function2): void
     public @org.jetbrains.annotations.Nullable method collect$$forInline(@org.jetbrains.annotations.NotNull p0: flow.FlowCollector, @org.jetbrains.annotations.NotNull p1: kotlin.coroutines.Continuation): java.lang.Object
