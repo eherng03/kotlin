@@ -54,8 +54,9 @@ open class DefaultArgumentStubGenerator(
 
     private fun lower(irFunction: IrFunction): List<IrFunction>? {
         val visibility = defaultArgumentStubVisibility(irFunction)
-        val newIrFunction = irFunction.generateDefaultsFunction(context, skipInlineMethods, skipExternalMethods, forceSetOverrideSymbols, visibility)
-            ?: return null
+        val newIrFunction =
+            irFunction.generateDefaultsFunction(context, skipInlineMethods, skipExternalMethods, forceSetOverrideSymbols, visibility)
+                ?: return null
         if (newIrFunction.origin == IrDeclarationOrigin.FAKE_OVERRIDE) {
             return listOf(irFunction, newIrFunction)
         }
@@ -414,24 +415,9 @@ private fun IrFunction.generateDefaultsFunction(
     if (context.mapping.defaultArgumentsOriginalFunction[this] != null) return null
     context.mapping.defaultArgumentsDispatchFunction[this]?.let { return it }
     if (this is IrSimpleFunction) {
-        // If this is an override of a function with default arguments, produce a fake override of a default stub.
+        // If this is an override of a function with default arguments, do nothing.
         if (overriddenSymbols.any { it.owner.findBaseFunctionWithDefaultArguments(skipInlineMethods, skipExternalMethods) != null })
-            return generateDefaultsFunctionImpl(context, IrDeclarationOrigin.FAKE_OVERRIDE, visibility).also {
-                context.mapping.defaultArgumentsDispatchFunction[this] = it
-                context.mapping.defaultArgumentsOriginalFunction[it] = this
-
-                if (forceSetOverrideSymbols) {
-                    (it as IrSimpleFunction).overriddenSymbols += overriddenSymbols.mapNotNull {
-                        it.owner.generateDefaultsFunction(
-                            context,
-                            skipInlineMethods,
-                            skipExternalMethods,
-                            forceSetOverrideSymbols,
-                            visibility
-                        )?.symbol as IrSimpleFunctionSymbol?
-                    }
-                }
-            }
+            return null
     }
     // Note: this is intentionally done *after* checking for overrides. While normally `override fun`s
     // have no default parameters, there is an exception in case of interface delegation:
@@ -506,7 +492,11 @@ private fun IrFunction.generateDefaultsFunctionImpl(
         val markerType = context.ir.symbols.defaultConstructorMarker.defaultType.makeNullable()
         newFunction.addValueParameter("marker".synthesizedString, markerType, IrDeclarationOrigin.DEFAULT_CONSTRUCTOR_MARKER)
     } else if (context.ir.shouldGenerateHandlerParameterForDefaultBodyFun()) {
-        newFunction.addValueParameter("handler".synthesizedString, context.irBuiltIns.anyNType, IrDeclarationOrigin.METHOD_HANDLER_IN_DEFAULT_FUNCTION)
+        newFunction.addValueParameter(
+            "handler".synthesizedString,
+            context.irBuiltIns.anyNType,
+            IrDeclarationOrigin.METHOD_HANDLER_IN_DEFAULT_FUNCTION
+        )
     }
 
     // TODO some annotations are needed (e.g. @JvmStatic), others need different values (e.g. @JvmName), the rest are redundant.
