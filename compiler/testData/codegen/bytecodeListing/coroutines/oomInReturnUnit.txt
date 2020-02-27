@@ -1,11 +1,11 @@
 @kotlin.Metadata
 final class OomInReturnUnitKt$test$1 {
     field L$0: java.lang.Object
-    synthetic field data: java.lang.Object
-    synthetic field exception: java.lang.Throwable
     inner class OomInReturnUnitKt$test$1
     method <init>(p0: kotlin.coroutines.experimental.Continuation): void
     public final @org.jetbrains.annotations.Nullable method doResume(@org.jetbrains.annotations.Nullable p0: java.lang.Object, @org.jetbrains.annotations.Nullable p1: java.lang.Throwable): java.lang.Object
+    synthetic field data: java.lang.Object
+    synthetic field exception: java.lang.Throwable
     synthetic final method getLabel(): int
     synthetic final method setLabel(p0: int): void
 }
@@ -20,32 +20,32 @@ public final class OomInReturnUnitKt {
 @kotlin.Metadata
 public abstract class helpers/ContinuationAdapter {
     private final @org.jetbrains.annotations.NotNull field context: kotlin.coroutines.experimental.CoroutineContext
-    public method <init>(): void
     public @org.jetbrains.annotations.NotNull method getContext(): kotlin.coroutines.experimental.CoroutineContext
+    public method <init>(): void
 }
 
 @kotlin.Metadata
 public final class helpers/CoroutineUtilKt$handleExceptionContinuation$1 {
-    synthetic final field $x: kotlin.jvm.functions.Function1
-    private final @org.jetbrains.annotations.NotNull field context: kotlin.coroutines.experimental.EmptyCoroutineContext
     inner class helpers/CoroutineUtilKt$handleExceptionContinuation$1
     method <init>(p0: kotlin.jvm.functions.Function1): void
-    public synthetic bridge method getContext(): kotlin.coroutines.experimental.CoroutineContext
+    private final @org.jetbrains.annotations.NotNull field context: kotlin.coroutines.experimental.EmptyCoroutineContext
     public @org.jetbrains.annotations.NotNull method getContext(): kotlin.coroutines.experimental.EmptyCoroutineContext
     public method resume(@org.jetbrains.annotations.Nullable p0: java.lang.Object): void
     public method resumeWithException(@org.jetbrains.annotations.NotNull p0: java.lang.Throwable): void
+    public synthetic bridge method getContext(): kotlin.coroutines.experimental.CoroutineContext
+    synthetic final field $x: kotlin.jvm.functions.Function1
 }
 
 @kotlin.Metadata
 public final class helpers/CoroutineUtilKt$handleResultContinuation$1 {
-    synthetic final field $x: kotlin.jvm.functions.Function1
-    private final @org.jetbrains.annotations.NotNull field context: kotlin.coroutines.experimental.EmptyCoroutineContext
     inner class helpers/CoroutineUtilKt$handleResultContinuation$1
     method <init>(p0: kotlin.jvm.functions.Function1): void
-    public synthetic bridge method getContext(): kotlin.coroutines.experimental.CoroutineContext
+    private final @org.jetbrains.annotations.NotNull field context: kotlin.coroutines.experimental.EmptyCoroutineContext
     public @org.jetbrains.annotations.NotNull method getContext(): kotlin.coroutines.experimental.EmptyCoroutineContext
     public method resume(p0: java.lang.Object): void
     public method resumeWithException(@org.jetbrains.annotations.NotNull p0: java.lang.Throwable): void
+    public synthetic bridge method getContext(): kotlin.coroutines.experimental.CoroutineContext
+    synthetic final field $x: kotlin.jvm.functions.Function1
 }
 
 @kotlin.Metadata
@@ -65,14 +65,14 @@ public final class helpers/EmptyContinuation$Companion {
 
 @kotlin.Metadata
 public class helpers/EmptyContinuation {
-    public final static field Companion: helpers.EmptyContinuation$Companion
-    private final @org.jetbrains.annotations.NotNull field context: kotlin.coroutines.experimental.CoroutineContext
     inner class helpers/EmptyContinuation$Companion
-    static method <clinit>(): void
+    private final @org.jetbrains.annotations.NotNull field context: kotlin.coroutines.experimental.CoroutineContext
+    public @org.jetbrains.annotations.NotNull method getContext(): kotlin.coroutines.experimental.CoroutineContext
+    public final static field Companion: helpers.EmptyContinuation$Companion
     public method <init>(): void
     public method <init>(@org.jetbrains.annotations.NotNull p0: kotlin.coroutines.experimental.CoroutineContext): void
-    public synthetic method <init>(p0: kotlin.coroutines.experimental.CoroutineContext, p1: int, p2: kotlin.jvm.internal.DefaultConstructorMarker): void
-    public @org.jetbrains.annotations.NotNull method getContext(): kotlin.coroutines.experimental.CoroutineContext
     public method resume(@org.jetbrains.annotations.Nullable p0: java.lang.Object): void
     public method resumeWithException(@org.jetbrains.annotations.NotNull p0: java.lang.Throwable): void
+    public synthetic method <init>(p0: kotlin.coroutines.experimental.CoroutineContext, p1: int, p2: kotlin.jvm.internal.DefaultConstructorMarker): void
+    static method <clinit>(): void
 }

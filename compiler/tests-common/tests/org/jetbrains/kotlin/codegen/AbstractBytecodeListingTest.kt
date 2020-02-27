@@ -167,8 +167,8 @@ class BytecodeListingTextCollectingVisitor(val filter: Filter, val withSignature
             append(className)
             if (declarationsInsideClass.isNotEmpty()) {
                 append(" {\n")
-                for (declaration in declarationsInsideClass.sortedBy { it.text }) {
-                    append("    ").append(declaration.annotations.joinToString("")).append(declaration.text).append("\n")
+                for (declaration in declarationsInsideClass.map { it.annotations.joinToString("") + it.text }.sorted()) {
+                    append("    ").append(declaration).append("\n")
                 }
                 append("}")
             }

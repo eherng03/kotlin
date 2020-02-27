@@ -1,104 +1,104 @@
 @kotlin.Metadata
 public abstract class A1 {
-    public method <init>(): void
-    public method contains(p0: java.lang.Object): boolean
-    public method containsAll(@org.jetbrains.annotations.NotNull p0: java.util.Collection): boolean
     public abstract method getSize(): int
     public abstract method remove(p0: java.lang.Object): boolean
     public bridge final method size(): int
+    public method <init>(): void
+    public method contains(p0: java.lang.Object): boolean
+    public method containsAll(@org.jetbrains.annotations.NotNull p0: java.util.Collection): boolean
     public method toArray(): java.lang.Object[]
     public method toArray(p0: java.lang.Object[]): java.lang.Object[]
 }
 
 @kotlin.Metadata
 public abstract class A2 {
+    public abstract method getSize(): int
+    public abstract method remove(p0: java.lang.String): boolean
+    public bridge final method contains(p0: java.lang.Object): boolean
+    public bridge final method remove(p0: java.lang.Object): boolean
+    public bridge final method size(): int
     public method <init>(): void
     public method contains(@org.jetbrains.annotations.NotNull p0: java.lang.String): boolean
-    public bridge final method contains(p0: java.lang.Object): boolean
     public method containsAll(@org.jetbrains.annotations.NotNull p0: java.util.Collection): boolean
-    public abstract method getSize(): int
-    public bridge final method remove(p0: java.lang.Object): boolean
-    public abstract method remove(p0: java.lang.String): boolean
-    public bridge final method size(): int
     public method toArray(): java.lang.Object[]
     public method toArray(p0: java.lang.Object[]): java.lang.Object[]
 }
 
 @kotlin.Metadata
 public abstract class A3 {
-    public method <init>(): void
     public abstract method getSize(): int
     public bridge final method remove(p0: int): java.lang.Object
-    public bridge method removeAt(p0: int): java.lang.Object
     public bridge final method size(): int
+    public bridge method removeAt(p0: int): java.lang.Object
+    public method <init>(): void
 }
 
 @kotlin.Metadata
 public abstract class A4 {
+    public abstract method getSize(): int
+    public bridge final method remove(p0: int): java.lang.Object
+    public bridge final method size(): int
+    public bridge method removeAt(p0: int): java.lang.Object
     public method <init>(): void
     public method contains(p0: java.lang.Object): boolean
     public method containsAll(@org.jetbrains.annotations.NotNull p0: java.util.Collection): boolean
-    public abstract method getSize(): int
-    public bridge final method remove(p0: int): java.lang.Object
-    public bridge method removeAt(p0: int): java.lang.Object
-    public bridge final method size(): int
 }
 
 @kotlin.Metadata
 public abstract class A5 {
-    public method <init>(): void
-    public bridge final method contains(p0: java.lang.Object): boolean
-    public bridge method contains(p0: java.lang.String): boolean
     public abstract method getSize(): int
+    public bridge final method contains(p0: java.lang.Object): boolean
     public bridge final method indexOf(p0: java.lang.Object): int
-    public bridge method indexOf(p0: java.lang.String): int
     public bridge final method lastIndexOf(p0: java.lang.Object): int
-    public bridge method lastIndexOf(p0: java.lang.String): int
     public bridge final method remove(p0: int): java.lang.String
     public bridge final method remove(p0: java.lang.Object): boolean
+    public bridge final method size(): int
+    public bridge method contains(p0: java.lang.String): boolean
+    public bridge method indexOf(p0: java.lang.String): int
+    public bridge method lastIndexOf(p0: java.lang.String): int
     public bridge method remove(p0: java.lang.String): boolean
     public bridge method removeAt(p0: int): java.lang.String
-    public bridge final method size(): int
+    public method <init>(): void
 }
 
 @kotlin.Metadata
 public abstract class A6 {
-    public method <init>(): void
-    public method contains(@org.jetbrains.annotations.NotNull p0: java.lang.String): boolean
-    public bridge final method contains(p0: java.lang.Object): boolean
-    public method containsAll(@org.jetbrains.annotations.NotNull p0: java.util.Collection): boolean
     public abstract method getSize(): int
+    public bridge final method contains(p0: java.lang.Object): boolean
     public bridge final method indexOf(p0: java.lang.Object): int
-    public bridge method indexOf(p0: java.lang.String): int
     public bridge final method lastIndexOf(p0: java.lang.Object): int
-    public bridge method lastIndexOf(p0: java.lang.String): int
     public bridge final method remove(p0: int): java.lang.String
     public bridge final method remove(p0: java.lang.Object): boolean
+    public bridge final method size(): int
+    public bridge method indexOf(p0: java.lang.String): int
+    public bridge method lastIndexOf(p0: java.lang.String): int
     public bridge method remove(p0: java.lang.String): boolean
     public bridge method removeAt(p0: int): java.lang.String
-    public bridge final method size(): int
+    public method <init>(): void
+    public method contains(@org.jetbrains.annotations.NotNull p0: java.lang.String): boolean
+    public method containsAll(@org.jetbrains.annotations.NotNull p0: java.util.Collection): boolean
 }
 
 @kotlin.Metadata
 public abstract class A7 {
-    public method <init>(): void
-    public method contains(p0: int): boolean
-    public bridge final method contains(p0: java.lang.Object): boolean
     public abstract method getSize(): int
     public abstract method remove(p0: java.lang.Integer): boolean
+    public bridge final method contains(p0: java.lang.Object): boolean
     public bridge final method remove(p0: java.lang.Object): boolean
     public bridge final method size(): int
+    public method <init>(): void
+    public method contains(p0: int): boolean
     public method toArray(): java.lang.Object[]
     public method toArray(p0: java.lang.Object[]): java.lang.Object[]
 }
 
 @kotlin.Metadata
 public abstract class A8 {
-    public method <init>(): void
-    public method contains(@org.jetbrains.annotations.Nullable p0: java.lang.Object): boolean
     public abstract method getSize(): int
     public abstract method remove(p0: java.lang.Object): boolean
     public bridge final method size(): int
+    public method <init>(): void
+    public method contains(@org.jetbrains.annotations.Nullable p0: java.lang.Object): boolean
     public method toArray(): java.lang.Object[]
     public method toArray(p0: java.lang.Object[]): java.lang.Object[]
 }

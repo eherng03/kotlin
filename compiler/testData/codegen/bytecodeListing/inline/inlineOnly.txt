@@ -1,7 +1,7 @@
 @kotlin.Metadata
 public final class Foo {
-    public method <init>(): void
     private final @kotlin.internal.InlineOnly method foo(): void
+    public method <init>(): void
 }
 
 @kotlin.Metadata

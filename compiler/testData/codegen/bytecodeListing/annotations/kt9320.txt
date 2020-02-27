@@ -18,12 +18,12 @@ public final class Kt9320Kt$foo$v$1 {
 
 @kotlin.Metadata
 final class Kt9320Kt$foo$w$1 {
-    public final static field INSTANCE: Kt9320Kt$foo$w$1
     inner class Kt9320Kt$foo$w$1
-    static method <clinit>(): void
     method <init>(): void
     public final @Ann method invoke(@org.jetbrains.annotations.NotNull p0: My): int
+    public final static field INSTANCE: Kt9320Kt$foo$w$1
     public synthetic bridge method invoke(p0: java.lang.Object): java.lang.Object
+    static method <clinit>(): void
 }
 
 @kotlin.Metadata

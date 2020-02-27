@@ -1,8 +1,8 @@
 @kotlin.Metadata
 public final class A {
-    public method <init>(): void
     public final @org.jetbrains.annotations.NotNull method f(@Ann @org.jetbrains.annotations.NotNull p0: java.lang.String): java.lang.String
     public final @org.jetbrains.annotations.NotNull method getP(@Ann @org.jetbrains.annotations.Nullable p0: java.lang.String): java.lang.String
+    public method <init>(): void
 }
 
 @java.lang.annotation.Retention

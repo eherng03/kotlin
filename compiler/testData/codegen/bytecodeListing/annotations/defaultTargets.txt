@@ -2,11 +2,11 @@
 public final class A {
     private final @AnnField @AnnParameterField @AnnTypeField field a: int
     private final @AnnField @AnnTypeField field x: int
+    public final method getA(): int
+    public final method getX(): int
     public method <init>(@AnnParameterProperty @AnnParameterField p0: int): void
     public synthetic deprecated static @AnnProperty @AnnFieldProperty @AnnParameterProperty method getA$annotations(): void
-    public final method getA(): int
     public synthetic deprecated static @AnnProperty @AnnFieldProperty method getX$annotations(): void
-    public final method getX(): int
 }
 
 @kotlin.annotation.Target
@@ -54,6 +54,6 @@ public annotation class Anno
 @kotlin.Metadata
 public final class DefaultTargetsKt {
     private final static @Anno field p2: int
-    static method <clinit>(): void
     public final static method getP2(): int
+    static method <clinit>(): void
 }

@@ -19,20 +19,20 @@ public annotation class FunAnn
 
 @kotlin.Metadata
 final class LiteralsKt$foo$1 {
-    synthetic final field $arg: int
     inner class LiteralsKt$foo$1
     method <init>(p0: int): void
     public final @FunAnn method invoke(): int
     public synthetic bridge method invoke(): java.lang.Object
+    synthetic final field $arg: int
 }
 
 @kotlin.Metadata
 final class LiteralsKt$foo$2 {
-    synthetic final field $arg: int
     inner class LiteralsKt$foo$2
     method <init>(p0: int): void
     public final method invoke(): int
     public synthetic bridge method invoke(): java.lang.Object
+    synthetic final field $arg: int
 }
 
 @ClsAnn
@@ -44,11 +44,11 @@ public final class LiteralsKt$foo$3 {
 
 @kotlin.Metadata
 final class LiteralsKt$foo$x$1 {
-    synthetic final field $arg: int
     inner class LiteralsKt$foo$x$1
     method <init>(p0: int): void
     public final @FunAnn method invoke(): int
     public synthetic bridge method invoke(): java.lang.Object
+    synthetic final field $arg: int
 }
 
 @kotlin.Metadata
@@ -57,8 +57,8 @@ public final class LiteralsKt {
     inner class LiteralsKt$foo$2
     inner class LiteralsKt$foo$3
     inner class LiteralsKt$foo$x$1
-    public final static method bar(@org.jetbrains.annotations.NotNull p0: kotlin.jvm.functions.Function0): int
     public final static @org.jetbrains.annotations.NotNull method foo(p0: int): My
+    public final static method bar(@org.jetbrains.annotations.NotNull p0: kotlin.jvm.functions.Function0): int
 }
 
 @kotlin.Metadata

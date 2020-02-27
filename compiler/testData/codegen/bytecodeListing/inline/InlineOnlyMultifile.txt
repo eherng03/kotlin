@@ -5,6 +5,6 @@ public final class test/Foo {
 
 @kotlin.Metadata
 synthetic final class test/Foo__InlineOnlyMultifileKt {
-    public final static method foo(): void
     private final static @kotlin.internal.InlineOnly method inlineOnly(): void
+    public final static method foo(): void
 }
